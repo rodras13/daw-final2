@@ -1,0 +1,28 @@
+{
+  "name": "daw-final2",
+  "version": "1.0.0",
+  "description": "Trabajo final del Grado Superior en Desarrollo de Aplicaciones Web - TestFriki",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodras13/daw-final2.git"
+  },
+  "keywords": [
+    "TFG",
+    "Ilerna",
+    "TestFriki",
+    "JavaScript",
+    "Express",
+    "CSS",
+    "HTML"
+  ],
+  "author": "R. Koscinski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodras13/daw-final2/issues"
+  },
+  "homepage": "https://github.com/rodras13/daw-final2#readme"
+}
