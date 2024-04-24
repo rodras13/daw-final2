@@ -3,11 +3,21 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+// const mysql = require('mysql2');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
 const app = express();
+
+// Creando la conexión a la base de datos
+
+// const connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'RooT1234',
+//   database: 'personality_web'
+// });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

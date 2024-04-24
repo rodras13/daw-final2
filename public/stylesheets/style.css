@@ -1,8 +1,271 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: rgb(128, 128, 128);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: whitesmoke;
+}
+
+/* Aqui se especifica el estilo de la plantilla de todas las páginas */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  height: 80px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 25px -5px, rgba(0, 0, 0, 0.2) 0px 10px 10px -5px;
+}
+
+nav .left-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .left-nav .logo-nav img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+nav .left-nav .links-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav .buttons-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+nav .buttons-nav a {
+  background-color: rgb(198, 195, 195);
+  padding: 8px 10px;
+  /* color: rgb(255, 255, 255); */
+  border-radius: 50%;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+nav .buttons-nav:hover {
+  color: rgb(145, 184, 206);
+}
+
+/* Y aquí se especifica el estilo del index */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+  justify-content: center;
+  text-align: center;
+  gap: 25px;
+  background-color: #fff;
+  opacity: 0.8;
+  background-image: url("../images/harry-potter-icon.png");
+  background-size: 60px 60px;
+  background-position: 0 0, 15px 15px;
+}
+
+.info {
+  background-color: #fff;
+  /* box-shadow: rgba(0, 0, 0, 0.2) 20px 20px 25px 20px, rgba(0, 0, 0, 0.2) 10px 10px 10px 10px; */
+}
+
+header .info h1 {
+  font-weight: 900;
+}
+
+header .info p {
+  color: #666;
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+header .buttons-header {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+header .buttons-header button {
+  border: none;
+  padding: 8px;
+  width: 140px;
+  border-radius: 10px;
+  background-color: #a6a6a6;
+  box-shadow: 0px 4px 70px -10px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  cursor: pointer;
+
+}
+
+header .buttons-header button.see-test {
+  background-color: #427b61;
+  cursor: pointer;
+  box-shadow: 0px 4px 70px -10px rgba(0, 0, 0, 0.6);
+}
+
+/* Aqui empieza la separacion conel resto de la pagina */
+
+.test-content {
+  background-color: whitesmoke;
+  padding: 50px 60px;
+}
+
+.test-content .separator-test {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+}
+
+.test-content .separator-test a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #427b61;
+  font-size: 15px;
+}
+
+.test-content .separator-test a i {
+  font-size: 18px;
+}
+
+.test-content .tests {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  margin-bottom: 100px;
+}
+
+.test-content .tests .test-item {
+  width: 30%;
+}
+
+.test-content .tests .top {
+  display: flex;
+  gap: 10px;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+}
+
+.test-content .tests .test-item .top img {
+  width: 160px;
+  height: 160px;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.test-content .tests .test-item .top .info a {
+  display: block;
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 7px;
+  line-height: 1.4rem;
+}
+
+.test-content .tests .test-item .top .info p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+/* Aquí es donde se hacen los estilos del footer  */
+
+footer {
+  display: flex;
+  margin-top: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px 20px;
+  background-color: #427b61;
+  box-shadow: 1px -10px 30px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+}
+
+footer .columns {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .columns .col {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+footer .columns .col-last {
+  flex: 3;
+}
+
+footer .columns .col h5 {
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+footer .columns .col a {
+  margin-bottom: 4px;
+  color: rgb(198, 198, 198);
+  font-size: 14px;
+}
+
+footer .columns .col a:hover {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+footer .columns .col-last p {
+  font-size: 14px;
+  margin: 12px 0 5px;
+}
+
+footer .columns .col-last .social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer .columns .col-last .social-links i {
+  font-size: 20px;
+}
+
+footer .copyright {
+  margin-top: 30px;
+  font-size: 13px;
 }

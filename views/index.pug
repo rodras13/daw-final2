@@ -1,6 +1,45 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title} pedazo de perro
-  img(src="./public/images/perro-index.jpg", alt="Tengo que aprender a usar Pug", srcset="")
+  header  
+    .info 
+      h1 ¿Quieres saber qué personaje eres?
+      p Elige tu universo preferido y adivina tu lugar en él
+    .buttons-header 
+      button.see-test Tests 
+      button ¿Qué es un test?
+  article.test-content 
+    .separator-test   
+      h2 Test populares 
+      a(href='#') Ver todos 
+        i.bx.bx-chevron-right
+    .tests 
+      section.test-item 
+       .top 
+         img(src='./images/sw-test-item.jpeg')
+         .info 
+          a(href='#') Test de Star Wars
+          p ¿Jedi o Sith?
+          p Encuentra el camino de la fuerza y lucha por tus ideas 
+      section.test-item 
+       .top 
+         img(src='./images/lodr-test-item.jpeg')
+         .info 
+          a(href='#') Test del Señor de los Anillos
+          p Mago, Elfo, Hobbit u Orco...
+          p El Anillo Único está en tus manos, ¿qué harás? 
+      section.test-item 
+       .top 
+         img(src='./images/hp-test-item.jpg')
+         .info 
+          a(href='#') Test de Harry Potter
+          p Gryffindor, Ravenclaw, Hafflepuff o Slytherin
+          p La varita escoge al mago, Señor... 
+  //- h2= title2 
+  //- if char_per_list.length 
+  //-   ul 
+  //-     for character in char_per_list 
+  //-       li #{character.question}
+  //- else
+  //-   p No hay ningun personaje
+  
