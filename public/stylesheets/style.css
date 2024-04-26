@@ -434,3 +434,11 @@ label input:checked~.radio-button {
   color: #676363;
   transition: all 0.5s ease;
 }
+
+/* Aquí se maquetan las imágenes de los resultados */
+
+main .img-char {
+  margin: 20px 0;
+  width: 700px;
+  aspect-ratio: 3/2;
+}

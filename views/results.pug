@@ -1,0 +1,6 @@
+extends layout 
+
+block content
+    main 
+        h1 Tu personaje es #{result.char_name}
+        img(src=`/images/${result.char_img}`, class='img-char')
