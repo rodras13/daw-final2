@@ -1,0 +1,147 @@
+extends layout 
+
+block content
+    if styleTarget=='sw'
+        if sw_test_items.length 
+            header.sw
+                .info
+                    h1 Test de Star Wars
+            main
+                .form-container
+                    form(action=``, method="get")
+                        for sw in sw_test_items
+                            fieldset
+                                .item-container 
+                                    .item-question
+                                        legend #{sw.question}
+                                    .item-answers 
+                                        .item-disagree No estoy de acuerdo
+                                        .radios 
+                                            .radio 
+                                                label(for=`${sw.item}-${sw.item_type}-1`)
+                                                    input(id=`${sw.item}-${sw.item_type}-1`, name=`${sw.item}-${sw.item_type}`, type='radio', value='1')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${sw.item}-${sw.item_type}-2`)
+                                                    input(id=`${sw.item}-${sw.item_type}-2`, name=`${sw.item}-${sw.item_type}`, type='radio', value='2')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${sw.item}-${sw.item_type}-3`)
+                                                    input(id=`${sw.item}-${sw.item_type}-3`, name=`${sw.item}-${sw.item_type}`, type='radio', value='3')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${sw.item}-${sw.item_type}-4`)
+                                                    input(id=`${sw.item}-${sw.item_type}-4`, name=`${sw.item}-${sw.item_type}`, type='radio', value='4')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${sw.item}-${sw.item_type}-5`)
+                                                    input(id=`${sw.item}-${sw.item_type}-5`, name=`${sw.item}-${sw.item_type}`, type='radio', value='5')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${sw.item}-${sw.item_type}-6`)
+                                                    input(id=`${sw.item}-${sw.item_type}-6`, name=`${sw.item}-${sw.item_type}`, type='radio', value='6')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${sw.item}-${sw.item_type}-7`)
+                                                    input(id=`${sw.item}-${sw.item_type}-7`, name=`${sw.item}-${sw.item_type}`, type='radio', value='7')
+                                                    span.radio-button
+                                        .item-agree Estoy de acuerdo
+                        .submit-button-container 
+                            button(class='submit-button', type='submit') Enviar datos
+    else if styleTarget=='lotr' 
+        if lotr_test_items.length 
+            header.lotr
+                .info
+                    h1 Test del Señor de los Anillos
+            main
+                .form-container
+                    form(action=``, method="get")
+                        for lotr in lotr_test_items
+                            fieldset
+                                .item-container 
+                                    .item-question
+                                        legend #{lotr.question}
+                                    .item-answers 
+                                        .item-disagree No estoy de acuerdo
+                                        .radios 
+                                            .radio 
+                                                label(for=`${lotr.item}-${lotr.item_type}-1`)
+                                                    input(id=`${lotr.item}-${lotr.item_type}-1`, name=`${lotr.item}-${lotr.item_type}`, type='radio', value='1')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${lotr.item}-${lotr.item_type}-2`)
+                                                    input(id=`${lotr.item}-${lotr.item_type}-2`, name=`${lotr.item}-${lotr.item_type}`, type='radio', value='2')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${lotr.item}-${lotr.item_type}-3`)
+                                                    input(id=`${lotr.item}-${lotr.item_type}-3`, name=`${lotr.item}-${lotr.item_type}`, type='radio', value='3')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${lotr.item}-${lotr.item_type}-4`)
+                                                    input(id=`${lotr.item}-${lotr.item_type}-4`, name=`${lotr.item}-${lotr.item_type}`, type='radio', value='4')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${lotr.item}-${lotr.item_type}-5`)
+                                                    input(id=`${lotr.item}-${lotr.item_type}-5`, name=`${lotr.item}-${lotr.item_type}`, type='radio', value='5')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${lotr.item}-${lotr.item_type}-6`)
+                                                    input(id=`${lotr.item}-${lotr.item_type}-6`, name=`${lotr.item}-${lotr.item_type}`, type='radio', value='6')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${lotr.item}-${lotr.item_type}-7`)
+                                                    input(id=`${lotr.item}-${lotr.item_type}-7`, name=`${lotr.item}-${lotr.item_type}`, type='radio', value='7')
+                                                    span.radio-button
+                                        .item-agree Estoy de acuerdo
+                        .submit-button-container 
+                            button(class='submit-button', type='submit') Enviar datos
+    else if styleTarget=='hp'
+        if hp_test_items.length
+            header.hp
+                .info
+                    h1 Test de Harry Potter
+            main
+                .form-container
+                    form(action=``, method="get")
+                        for hp in hp_test_items
+                            fieldset
+                                .item-container 
+                                    .item-question
+                                        legend #{hp.question}
+                                    .item-answers 
+                                        .item-disagree No estoy de acuerdo
+                                        .radios 
+                                            .radio 
+                                                label(for=`${hp.item}-${hp.item_type}-1`)
+                                                    input(id=`${hp.item}-${hp.item_type}-1`, name=`${hp.item}-${hp.item_type}`, type='radio', value='1')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${hp.item}-${hp.item_type}-2`)
+                                                    input(id=`${hp.item}-${hp.item_type}-2`, name=`${hp.item}-${hp.item_type}`, type='radio', value='2')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${hp.item}-${hp.item_type}-3`)
+                                                    input(id=`${hp.item}-${hp.item_type}-3`, name=`${hp.item}-${hp.item_type}`, type='radio', value='3')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${hp.item}-${hp.item_type}-4`)
+                                                    input(id=`${hp.item}-${hp.item_type}-4`, name=`${hp.item}-${hp.item_type}`, type='radio', value='4')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${hp.item}-${hp.item_type}-5`)
+                                                    input(id=`${hp.item}-${hp.item_type}-5`, name=`${hp.item}-${hp.item_type}`, type='radio', value='5')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${hp.item}-${hp.item_type}-6`)
+                                                    input(id=`${hp.item}-${hp.item_type}-6`, name=`${hp.item}-${hp.item_type}`, type='radio', value='6')
+                                                    span.radio-button
+                                            .radio 
+                                                label(for=`${hp.item}-${hp.item_type}-7`)
+                                                    input(id=`${hp.item}-${hp.item_type}-7`, name=`${hp.item}-${hp.item_type}`, type='radio', value='7')
+                                                    span.radio-button
+                                        .item-agree Estoy de acuerdo
+                        .submit-button-container 
+                            button(class='submit-button', type='submit') Enviar datos
+
+
+

@@ -10,14 +10,14 @@ html
     nav
       div.left-nav
         div.logo-nav 
-          img(src='./images/perro-index.jpg', alt='Lo que parece el Logo')
+          img(src='/images/perro-index.jpg', alt='Lo que parece el Logo')
         div.links-nav 
-          a(href='#') Home
-          a(href='#') Universos 
-          a(href='#') Comunidad 
-          a(href='#') Sobre el Test
+          a(href='/') Home
+          a(href='/universos') Universos 
+          a(href='/comunidad') Comunidad 
+          a(href='/aboutest') Sobre el Test
       div.buttons-nav 
-        a(href='#')
+        a(href='/users')
           i.bx.bx-user 
     block content
     block foot
@@ -25,18 +25,23 @@ html
         .columns 
           .col 
             h5 Enlaces 
-            a(href='#') Universos
-            a(href='#') Comunidad
-            a(href='#') Sobre el Test  
+            a(href='/universos') Universos
+            a(href='/comunidad') Comunidad
+            a(href='/aboutest') Sobre el Test  
           .col 
             h5 Otras Páginas 
-            a(href='#') Error 404
-            a(href='#') Inicio de Sesión / Registrarse 
+            a(href='/error') Error 404
+            a(href='/aboutest') Inicio de Sesión / Registrarse 
             a(href='#') Política de Privacidad
           .col-last 
             h5 Sobre Nosotros 
             p En verdad no hay un nosotros, sólo soy un alumno de DAW y este es mi TFG
             .social-links 
-              i.bx.bxl-github
+              a(href='https://github.com/rodras13/daw-final2')
+                i.bx.bxl-github
+              a(href='https://www.instagram.com/harrypotter/?hl=es')
+                i.bx.bxl-instagram
+              a(href='https://twitter.com/starwars')
+                i.bx.bxl-twitter
         .copyright 
           p Copyright© 2024 rodras13, All Rights Reserved

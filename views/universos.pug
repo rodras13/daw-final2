@@ -1,20 +1,11 @@
 extends layout
 
 block content
-  header  
+  header.uni
     .info 
-      h1 ¿Quieres saber qué personaje eres?
-      p Elige tu universo preferido y adivina tu lugar en él
-    .buttons-header 
-      a(href='/universos')
-        button(class='see-test') Tests
-      a(href='/aboutest')
-        button ¿Qué es un test?
+      h1 Todos los Universos disponibles 
+      p Ten en cuenta que iremos añadiendo más poco a poco 
   article.test-content 
-    .separator-test   
-      h2 Test populares 
-      a(href='/universos') Ver todos 
-        i.bx.bx-chevron-right
     .tests 
       section.test-item 
        .top 
@@ -37,4 +28,11 @@ block content
           a(href='/universos/harrypotter') Test de Harry Potter
           p Gryffindor, Ravenclaw, Hafflepuff o Slytherin
           p La varita escoge al mago, Señor... 
+      section.test-item
+        .top 
+          img(src='./images/perro-index.jpg') 
+          .info 
+            a(href='https://www.leagueoflegends.com/es-es/') Puede...
+            p Próximamente...
+            p Quizá uno de League of Legends...
   

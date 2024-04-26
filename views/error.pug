@@ -1,6 +1,17 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  header
+    .info 
+      h1= message 
+      p Esta usted en una dirección erronea o ha habido un fallo en el servidor 
+      p Diríjase a los enlaces facilitados por la página o 
+        em inténtelo de nuevo
+  main
+    if error
+      h2= error.status 
+      pre #{error.stack}
+    else 
+      p Tranquilizarse que aquí no ha pasado nada 
+      p 
+        q Amadeo I de Saboya

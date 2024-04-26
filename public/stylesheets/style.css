@@ -89,10 +89,48 @@ header {
   text-align: center;
   gap: 25px;
   background-color: #fff;
-  opacity: 0.8;
   background-image: url("../images/harry-potter-icon.png");
   background-size: 60px 60px;
   background-position: 0 0, 15px 15px;
+  background-attachment: fixed;
+}
+
+/* Sub-apartado para que el test renderice cada cosa en su lugar */
+
+header.sw {
+  background-image: url("../images/sw-test-item.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 300px 0;
+}
+
+header.lotr {
+  background-image: url("../images/lodr-test-item.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 300px 0;
+  box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.6);
+}
+
+header.hp {
+  background-image: url("../images/hp-test-item.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 300px 0;
+}
+
+header.uni {
+  background-image: url("../images/uni-index.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 200px 0;
+}
+
+header.dev {
+  background-image: url("../images/develoment.png");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 150px 0;
 }
 
 .info {
@@ -131,6 +169,15 @@ header .buttons-header button {
 
 header .buttons-header button.see-test {
   background-color: #427b61;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0px 4px 70px -10px rgba(0, 0, 0, 0.6);
+}
+
+header .buttons-header button:hover {
+  background-color: #9bb6aa;
+  color: #427b61;
+  transition: all 0.5s ease;
   cursor: pointer;
   box-shadow: 0px 4px 70px -10px rgba(0, 0, 0, 0.6);
 }
@@ -268,4 +315,122 @@ footer .columns .col-last .social-links i {
 footer .copyright {
   margin-top: 30px;
   font-size: 13px;
+}
+
+/* Aquí se añade el estilo de los items del test */
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 80px;
+}
+
+.form-container {
+  display: flex;
+}
+
+fieldset {
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom-color: #c4c4c4;
+  border-bottom-width: 1px;
+  border-bottom-style: ridge;
+}
+
+fieldset .item-container legend {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+fieldset .item-answers {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin: 50px 0;
+}
+
+fieldset .item-answers .item-disagree,
+fieldset .item-answers .item-agree {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+fieldset .item-answers .item-disagree {
+  color: #9a5948;
+}
+
+fieldset .item-answers .item-agree {
+  color: #427b61;
+}
+
+.radios {
+  display: flex;
+  gap: 40px;
+}
+
+label input {
+  display: none;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.radio-button {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 2px solid #9e9e9e;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+label:hover input~.radio-button {
+  background-color: #7eaa96;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+}
+
+label input:checked~.radio-button {
+  background-color: #7eaa96;
+  outline: 1px solid #7eaa96;
+}
+
+.submit-button-container {
+  display: flex;
+  margin: 50px 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.submit-button-container .submit-button {
+  border: none;
+  padding: 8px;
+  width: 170px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #427b61;
+  box-shadow: 0px 4px 70px -10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  /* border: 1px solid #427b61; */
+  background-color: #b6cac1;
+  color: #676363;
+  transition: all 0.5s ease;
 }

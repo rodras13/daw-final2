@@ -1,0 +1,33 @@
+extends layout 
+
+block content
+    if styleTarget=='sw'
+        header.sw
+            .info 
+                if test_description.length 
+                    for td in test_description
+                        h1 #{td.name_uni}
+                        p #{td.desc_uni} 
+            .buttons-header
+                a(href='/universos/starwars/test')     
+                    button.see-test Hacer Test
+    else if styleTarget=='lotr'
+        header.lotr
+            .info 
+                if test_description.length 
+                    for td in test_description
+                        h1 #{td.name_uni}
+                        p #{td.desc_uni} 
+            .buttons-header
+                a(href='/universos/lordoftherings/test')     
+                    button.see-test Hacer Test
+    else if styleTarget=='hp'
+        header.hp
+            .info 
+                if test_description.length 
+                    for td in test_description
+                        h1 #{td.name_uni}
+                        p #{td.desc_uni} 
+            .buttons-header
+                a(href='/universos/harrypotter/test')     
+                    button.see-test Hacer Test
